@@ -1,0 +1,16 @@
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Gets a RegExp used to detect an angular wrapped error message.
+ * See https://github.com/angular/angular/issues/8348
+ */
+export function wrappedErrorMessage(e) {
+    const escapedMessage = e.message.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
+    return new RegExp(escapedMessage);
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoid3JhcHBlZC1lcnJvci1tZXNzYWdlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vY29tcG9uZW50cy9jb3JlL3Rlc3Rpbmcvd3JhcHBlZC1lcnJvci1tZXNzYWdlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7R0FNRztBQUVIOzs7R0FHRztBQUNILE1BQU0sVUFBVSxtQkFBbUIsQ0FBQyxDQUFRO0lBQzFDLE1BQU0sY0FBYyxHQUFHLENBQUMsQ0FBQyxPQUFPLENBQUMsT0FBTyxDQUFDLHFCQUFxQixFQUFFLE1BQU0sQ0FBQyxDQUFDO0lBQ3hFLE9BQU8sSUFBSSxNQUFNLENBQUMsY0FBYyxDQUFDLENBQUM7QUFDcEMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGxpY2Vuc2VcbiAqIENvcHlyaWdodCBHb29nbGUgTExDIEFsbCBSaWdodHMgUmVzZXJ2ZWQuXG4gKlxuICogVXNlIG9mIHRoaXMgc291cmNlIGNvZGUgaXMgZ292ZXJuZWQgYnkgYW4gTUlULXN0eWxlIGxpY2Vuc2UgdGhhdCBjYW4gYmVcbiAqIGZvdW5kIGluIHRoZSBMSUNFTlNFIGZpbGUgYXQgaHR0cHM6Ly9hbmd1bGFyLmlvL2xpY2Vuc2VcbiAqL1xuXG4vKipcbiAqIEdldHMgYSBSZWdFeHAgdXNlZCB0byBkZXRlY3QgYW4gYW5ndWxhciB3cmFwcGVkIGVycm9yIG1lc3NhZ2UuXG4gKiBTZWUgaHR0cHM6Ly9naXRodWIuY29tL2FuZ3VsYXIvYW5ndWxhci9pc3N1ZXMvODM0OFxuICovXG5leHBvcnQgZnVuY3Rpb24gd3JhcHBlZEVycm9yTWVzc2FnZShlOiBFcnJvcik6IFJlZ0V4cCB7XG4gIGNvbnN0IGVzY2FwZWRNZXNzYWdlID0gZS5tZXNzYWdlLnJlcGxhY2UoL1t8XFxcXHt9KClbXFxdXiQrKj8uXS9nLCAnXFxcXCQmJyk7XG4gIHJldHVybiBuZXcgUmVnRXhwKGVzY2FwZWRNZXNzYWdlKTtcbn1cbiJdfQ==

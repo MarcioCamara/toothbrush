@@ -1,0 +1,11 @@
+{
+  "main": "../../bundles/ng-zorro-antd-core-resize-observers.umd.js",
+  "module": "../../fesm2015/ng-zorro-antd-core-resize-observers.js",
+  "es2015": "../../fesm2015/ng-zorro-antd-core-resize-observers.js",
+  "esm2015": "../../esm2015/core/resize-observers/ng-zorro-antd-core-resize-observers.js",
+  "fesm2015": "../../fesm2015/ng-zorro-antd-core-resize-observers.js",
+  "typings": "ng-zorro-antd-core-resize-observers.d.ts",
+  "metadata": "ng-zorro-antd-core-resize-observers.metadata.json",
+  "sideEffects": false,
+  "name": "ng-zorro-antd/core/resize-observers"
+}

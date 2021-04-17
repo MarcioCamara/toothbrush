@@ -1,0 +1,10 @@
+
+    <a
+      nz-popconfirm
+      nzPopconfirmTitle="Are you sure delete this task?"
+      nzPopconfirmPlacement="bottom"
+      (nzOnConfirm)="confirm()"
+      (nzOnCancel)="cancel()"
+      >Delete</a
+    >
+  

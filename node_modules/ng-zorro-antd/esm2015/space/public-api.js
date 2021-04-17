@@ -1,0 +1,10 @@
+/**
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE
+ */
+export * from './space.module';
+export * from './space.component';
+export * from './space-item.component';
+export * from './space-item.directive';
+export * from './types';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2NvbXBvbmVudHMvc3BhY2UvcHVibGljLWFwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7O0dBR0c7QUFFSCxjQUFjLGdCQUFnQixDQUFDO0FBQy9CLGNBQWMsbUJBQW1CLENBQUM7QUFDbEMsY0FBYyx3QkFBd0IsQ0FBQztBQUN2QyxjQUFjLHdCQUF3QixDQUFDO0FBQ3ZDLGNBQWMsU0FBUyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBVc2Ugb2YgdGhpcyBzb3VyY2UgY29kZSBpcyBnb3Zlcm5lZCBieSBhbiBNSVQtc3R5bGUgbGljZW5zZSB0aGF0IGNhbiBiZVxuICogZm91bmQgaW4gdGhlIExJQ0VOU0UgZmlsZSBhdCBodHRwczovL2dpdGh1Yi5jb20vTkctWk9SUk8vbmctem9ycm8tYW50ZC9ibG9iL21hc3Rlci9MSUNFTlNFXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9zcGFjZS5tb2R1bGUnO1xuZXhwb3J0ICogZnJvbSAnLi9zcGFjZS5jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi9zcGFjZS1pdGVtLmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL3NwYWNlLWl0ZW0uZGlyZWN0aXZlJztcbmV4cG9ydCAqIGZyb20gJy4vdHlwZXMnO1xuIl19

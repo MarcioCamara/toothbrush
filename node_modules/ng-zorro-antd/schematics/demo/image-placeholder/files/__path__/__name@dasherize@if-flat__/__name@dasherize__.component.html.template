@@ -1,0 +1,6 @@
+
+    <nz-space [nzSize]="12">
+      <nz-space-item><img nz-image width="200px" height="200px" [nzSrc]="src" [nzPlaceholder]="placeholder" /></nz-space-item>
+      <nz-space-item><button nz-button nzType="primary" (click)="onReload()">Reload</button></nz-space-item>
+    </nz-space>
+  

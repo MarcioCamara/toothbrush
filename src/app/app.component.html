@@ -1,0 +1,68 @@
+<nz-layout>
+	<nz-content style="display: flex; flex-direction: column;">
+		<div style="display: flex; flex-direction: column;" *ngFor="let question of questions; let i = index">
+			<div *ngIf="i === currentQuestion">
+				<nz-card *ngIf="!isStarted">
+					<img src="/assets/imgs/divination-wizard.jpg" width="100%" />
+
+					<h3 style="margin-top: 16px;">
+						Posso adivinhar a cor da sua escova de dentes apenas com algumas perguntas simples.
+					</h3>
+
+					<h3 style="margin-top: 16px;">
+						Duvidas??? Então aceite o desafio clicando em "Começar!"
+					</h3>
+
+					<button nz-button style="margin-top: 16px;" nzType="primary" (click)="start()">
+						Começar!
+					</button>
+				</nz-card>
+
+				<nz-card *ngIf="!isShowingResult && isStarted" [nzTitle]="(i + 1) + ' - ' + question.title">
+					<nz-select *ngIf="question.type === 'select'" style="width: 100%;"
+						[(ngModel)]="models['value' + i]">
+						<nz-option *ngFor="let option of question.options" [nzValue]="option" [nzLabel]="option">
+						</nz-option>
+					</nz-select>
+
+					<input *ngIf="question.type === 'input'" nz-input [(ngModel)]="models['value' + i]" />
+
+					<div style="display: flex; flex-direction: row; justify-content: space-between;">
+						<button [disabled]="currentQuestion <= 0" nz-button style="margin-top: 16px;" nzType="primary"
+							(click)="previousQuestion()">Anterior</button>
+
+						<button *ngIf="currentQuestion + 1 < questions.length" [disabled]="!models['value' + i]"
+							nz-button style="margin-top: 16px;" nzType="primary"
+							(click)="nextQuestion()">Próxima</button>
+
+						<button *ngIf="currentQuestion + 1 === questions.length" [disabled]="!models['value' + i]"
+							nz-button style="margin-top: 16px;" nzType="primary" (click)="showResult()">Mostrar
+							Resultado</button>
+					</div>
+				</nz-card>
+
+				<nz-card *ngIf="isShowingResult && isStarted"
+					style="display: flex; flex-direction: column; align-items: center;">
+					<h2 style="margin-bottom: 16px;">
+						A cor da sua escova de dentes é:
+						<strong>
+							{{ models['value' + (questions.length - 1)] }}
+						</strong>
+					</h2>
+
+					<p>
+						Se eu sou um mago?
+					</p>
+
+					<img src="/assets/imgs/wizard.png" />
+					<br />
+					<button *ngIf="isShowingResult" nz-button style="margin-top: 16px;" nzType="primary"
+						(click)="restartQuestions()">Refazer Teste</button>
+				</nz-card>
+			</div>
+		</div>
+	</nz-content>
+
+	<nz-footer style="text-align: center;">Developed with 😹 by Marcio
+		Câmara</nz-footer>
+</nz-layout>
