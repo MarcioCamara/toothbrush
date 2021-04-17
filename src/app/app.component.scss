@@ -4,5 +4,11 @@ nz-layout {
 }
 
 nz-content {
-    padding: 10vh 20vw;
+    padding: 10vh 30vw;
+}
+
+@media (max-width: 600px) {
+    nz-content {
+        padding: 10vh 5vw;
+    }   
 }

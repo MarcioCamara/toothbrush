@@ -2,8 +2,11 @@
 	<nz-content style="display: flex; flex-direction: column;">
 		<div style="display: flex; flex-direction: column;" *ngFor="let question of questions; let i = index">
 			<div *ngIf="i === currentQuestion">
-				<nz-card *ngIf="!isStarted">
-					<img src="/assets/imgs/divination-wizard.jpg" width="100%" />
+				<nz-card *ngIf="!isStarted" [nzCover]="coverTemplate"
+					style="display: flex; flex-direction: column; align-items: center;">
+					<ng-template #coverTemplate>
+						<img src="assets/imgs/divination-wizard.jpg" />
+					</ng-template>
 
 					<h3 style="margin-top: 16px;">
 						Posso adivinhar a cor da sua escova de dentes apenas com algumas perguntas simples.
